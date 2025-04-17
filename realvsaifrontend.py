@@ -42,7 +42,7 @@ st.title("Real vs AI Image Detector")
 # Load the trained model
 loaded_model = Net()
 try:
-    loaded_model.load_state_dict(torch.load(r'C:\Users\Umar\Downloads\Rayyan\real_vs_ai_model.pth', map_location=torch.device('cpu')))
+    loaded_model.load_state_dict(torch.load(r'real_vs_ai_model.pth', map_location=torch.device('cpu')))
     loaded_model.eval()
 except FileNotFoundError:
     st.error("Error: 'real_vs_ai_model.pth' not found. Make sure it's in the same directory.")
