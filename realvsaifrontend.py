@@ -72,7 +72,7 @@ if uploaded_file is not None:
     prediction_value = predict(preprocessed_image)
 
     st.subheader("Prediction:")
-    if prediction_value < 0.5:
+    if prediction_value > 0.5:
         st.write(f"This image is likely **REAL** (Confidence: {prediction_value:.4f})")
     else:
         st.write(f"This image is likely **AI-GENERATED** (Confidence: {1 - prediction_value:.4f})")
